@@ -1,4 +1,10 @@
-import { Box, Card, cardActionAreaClasses, CardContent, Typography } from "@mui/material";
+import {
+  Box,
+  Card,
+  cardActionAreaClasses,
+  CardContent,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -48,24 +54,47 @@ const Tasks = ({ client }) => {
   return (
     <Box
       sx={{
-        width:"80%",
-        my:8
+        width: "80%",
+        my: 8,
       }}
     >
-      <Typography component='div' sx={{fontWeight:"bold", mb: 4, fontSize:24, color:"aliceblue"}}>TAREAS</Typography>
+      <Typography
+        component="div"
+        sx={{ fontWeight: "bold", mb: 4, fontSize: 24, color: "aliceblue" }}
+      >
+        TAREAS
+      </Typography>
       <Slider {...settings}>
         {client.preguntas.map((e, i) => {
-            let contador = 0
-            const trans = e.texto
-            const comment = trans.replace(/\\n/g, '<br/>');
+          let contador = 0;
+          const trans = e.texto;
+          const comment = trans.replace(/\\n/g, "<br/>");
           return (
             <div>
-              <Card key={i} sx={{ maxWidth:"100%",maxHeight:"auto", mx:"3%", }}>
+              <Card
+                key={i}
+                sx={{ maxWidth: "100%", maxHeight: "auto", mx: "3%" }}
+              >
                 <CardContent>
-                  <Typography component='div' sx={{fontWeight:"bold", mb: 1.5, fontSize:24}}>Tarea N°: {i+1}</Typography>
-                  <Typography component='div' sx={{mb: 1.5,fontSize:18}}><span dangerouslySetInnerHTML={{__html: `<p>${comment}</p>`}}></span></Typography>
-                  {e.respuesta.length == 1 && <Typography sx={{ mb: 1.5, fontSize:16 }}>Respuesta: {e.respuesta}</Typography>}
-                  <Typography sx={{ mb: 1.5, fontSize:14, color:"red" }}>Tiempo: {e.tiempo}</Typography>
+                  <Typography
+                    component="div"
+                    sx={{ fontWeight: "bold", mb: 1.5, fontSize: 24 }}
+                  >
+                    Tarea N°: {i + 1}
+                  </Typography>
+                  <Typography component="div" sx={{ mb: 1.5, fontSize: 18 }}>
+                    <span
+                      dangerouslySetInnerHTML={{ __html: `<p>${comment}</p>` }}
+                    ></span>
+                  </Typography>
+                  {e.respuesta.length == 1 && (
+                    <Typography sx={{ mb: 1.5, fontSize: 16 }}>
+                      Respuesta: {e.respuesta}
+                    </Typography>
+                  )}
+                  <Typography sx={{ mb: 1.5, fontSize: 14, color: "red" }}>
+                    Tiempo: {e.tiempo}
+                  </Typography>
                 </CardContent>
               </Card>
             </div>

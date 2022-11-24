@@ -17,7 +17,7 @@ const Cards = () => {
       sx={{
         display: "flex",
         justifyContent: "center",
-        flexDirection:{xs:"column", sm:"column",md:"row",},
+        flexDirection: { xs: "column", sm: "column", md: "row" },
       }}
     >
       {db.map((e) => {
@@ -26,13 +26,13 @@ const Cards = () => {
             sx={{
               maxWidth: 300,
               maxHeight: 200,
-              m:4,
+              m: 4,
               transition: "transform 0.3s ease-out",
               "&:hover": { transform: "scale(1.05)" },
             }}
             key={e.cliente}
           >
-            <CardContent sx={{height:"70%"}}>
+            <CardContent sx={{ height: "70%" }}>
               <Typography gutterBottom variant="h5" component="div">
                 {e.cliente.toUpperCase()}
               </Typography>
@@ -41,12 +41,22 @@ const Cards = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Link to={`/client/${e.cliente}`} style={{ textDecoration: "none"}} >
-              <Button variant="contained" size="small" sx={{backgroundColor:"#E56A97", ":hover":{
-                backgroundColor:"#D4145A"
-              }}}>
-                IR A TEST
-              </Button>
+              <Link
+                to={`/client/${e.cliente}`}
+                style={{ textDecoration: "none" }}
+              >
+                <Button
+                  variant="contained"
+                  size="small"
+                  sx={{
+                    backgroundColor: "#E56A97",
+                    ":hover": {
+                      backgroundColor: "#D4145A",
+                    },
+                  }}
+                >
+                  IR A TEST
+                </Button>
               </Link>
             </CardActions>
           </Card>

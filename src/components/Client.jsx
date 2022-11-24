@@ -1,4 +1,4 @@
-import { Box, Button,Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import db from "../db/db.json";
@@ -19,10 +19,10 @@ const Client = () => {
         alignItems: "center",
         justifyContent: "center",
         alignContent: "center",
-        mt:4,
+        mt: 4,
       }}
     >
-      <Link to='/' style={{ textDecoration: "none" }}>
+      <Link to="/" style={{ textDecoration: "none" }}>
         <Button
           variant="contained"
           size="small"
