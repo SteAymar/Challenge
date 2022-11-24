@@ -67,9 +67,8 @@ const Tasks = ({ tasks }) => {
           const trans = e.texto;
           const comment = trans.replace(/\\n/g, "<br/>");
           return (
-            <div>
+            <div key={i}>
               <Card
-                key={i}
                 sx={{ maxWidth: "100%", maxHeight: "auto", mx: "3%" }}
               >
                 <CardContent>
