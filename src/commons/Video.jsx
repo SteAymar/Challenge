@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import React from "react";
 import ReactPlayer from "react-player";
 
-const Video = () => {
+const Video = ({url}) => {
   return (
     <Box
       sx={{
@@ -13,7 +13,7 @@ const Video = () => {
       <ReactPlayer
         width="100%"
         height="100%"
-        url="https://dbw7vamj238cm.cloudfront.net/Nebula_challenge.mp4"
+        url={url}
         controls={true}
       />
     </Box>

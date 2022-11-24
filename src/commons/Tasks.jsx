@@ -1,7 +1,6 @@
 import {
   Box,
   Card,
-  cardActionAreaClasses,
   CardContent,
   Typography,
 } from "@mui/material";
@@ -9,9 +8,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { maxHeight } from "@mui/system";
 
-const Tasks = ({ client }) => {
+
+const Tasks = ({ tasks }) => {
   const settings = {
     infinite: false,
     speed: 500,
@@ -50,7 +49,6 @@ const Tasks = ({ client }) => {
       },
     ],
   };
-  console.log("tareas-->", client);
   return (
     <Box
       sx={{
@@ -65,8 +63,7 @@ const Tasks = ({ client }) => {
         TAREAS
       </Typography>
       <Slider {...settings}>
-        {client.preguntas.map((e, i) => {
-          let contador = 0;
+        {tasks.map((e, i) => {
           const trans = e.texto;
           const comment = trans.replace(/\\n/g, "<br/>");
           return (
@@ -87,7 +84,7 @@ const Tasks = ({ client }) => {
                       dangerouslySetInnerHTML={{ __html: `<p>${comment}</p>` }}
                     ></span>
                   </Typography>
-                  {e.respuesta.length == 1 && (
+                  {e.respuesta.length === 1 && (
                     <Typography sx={{ mb: 1.5, fontSize: 16 }}>
                       Respuesta: {e.respuesta}
                     </Typography>

@@ -1,9 +1,10 @@
 import { Box, Paper, Typography } from "@mui/material";
 import React from "react";
 
-const Transcription = ({ client }) => {
-  const trans = client.transcripcion;
-  const comment = trans.replace(/<br>/g, "<br/>");
+const Transcription = ({ transcription }) => {
+
+  //para no cambiar el Json origial reemplacé el tag <br> por <br/>
+  const comment = transcription.replace(/<br>/g, "<br/>"); 
   return (
     <Box
       sx={{
