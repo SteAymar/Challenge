@@ -7,7 +7,8 @@ const Video = () => {
   return (
     <Box
     sx={{
-        width:{xs:"90%",sm:"80%",md:"70%"}
+        width:{xs:"90%",sm:"80%",md:"70%"},
+        mb:2,
     }}
     >
       <ReactPlayer

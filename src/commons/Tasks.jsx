@@ -49,6 +49,7 @@ const Tasks = ({ client }) => {
     <Box
       sx={{
         width:"80%",
+        my:8
       }}
     >
       <Typography component='div' sx={{fontWeight:"bold", mb: 4, fontSize:24, color:"aliceblue"}}>TAREAS</Typography>
