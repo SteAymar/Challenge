@@ -17,7 +17,7 @@ const Cards = () => {
       sx={{
         display: "flex",
         justifyContent: "center",
-        flexDirection: "row",
+        flexDirection:{xs:"column", sm:"column",md:"row",},
       }}
     >
       {db.map((e) => {

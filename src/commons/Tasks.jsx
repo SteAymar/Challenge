@@ -14,11 +14,17 @@ const Tasks = ({ client }) => {
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 900,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          infinite: true,
         },
       },
       {
@@ -42,7 +48,7 @@ const Tasks = ({ client }) => {
   return (
     <Box
       sx={{
-        width:1200,
+        width:"80%",
       }}
     >
       <Typography component='div' sx={{fontWeight:"bold", mb: 4, fontSize:24, color:"aliceblue"}}>TAREAS</Typography>
@@ -53,7 +59,7 @@ const Tasks = ({ client }) => {
             const comment = trans.replace(/\\n/g, '<br/>');
           return (
             <div>
-              <Card key={i} sx={{ maxWidth:400,maxHeight:"auto", mx:2, }}>
+              <Card key={i} sx={{ maxWidth:"100%",maxHeight:"auto", mx:"3%", }}>
                 <CardContent>
                   <Typography component='div' sx={{fontWeight:"bold", mb: 1.5, fontSize:24}}>Tarea N°: {i+1}</Typography>
                   <Typography component='div' sx={{mb: 1.5,fontSize:18}}><span dangerouslySetInnerHTML={{__html: `<p>${comment}</p>`}}></span></Typography>

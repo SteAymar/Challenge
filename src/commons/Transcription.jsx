@@ -7,13 +7,16 @@ const Transcription = ({ client }) => {
     const comment = trans.replace(/<br>/g, '<br/>');
   return (
     <Box sx={{
-        textAlign:"left"
+        display:"flex",
+        justifyContent:"center",
+        textAlign:"left",
+        flexDirection:"column",
+        width:"80%"
     }}>
       <Typography  sx={{fontWeight:"bold", mb: 4, fontSize:24, color:"aliceblue"}}>TRANSCIPCIÓN</Typography>
       <Paper
         elevation={2}
         sx={{
-          maxWidth: 1200,
           maxHeight: 300,
           overflow: "scroll",
           mb:4,

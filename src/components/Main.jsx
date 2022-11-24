@@ -12,6 +12,7 @@ const Main = () => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent:"center",
+          textAlign:{xs:"center", sm:"center"},
           height:"100vh"
         }}
       >
